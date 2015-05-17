@@ -1,4 +1,4 @@
-#VERSION 1.0.1
+#VERSION 1.0.2
 FROM keboola/base
 MAINTAINER Petr Konupek <petr@konupek.cz>
 
@@ -19,9 +19,9 @@ RUN yum -y update && \
 
 # Install python2.7
 RUN cd /tmp && \
-    wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz && \
-    tar xvfz Python-2.7.8.tgz && \
-    cd Python-2.7.8 && \
+    wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz && \
+    tar xvfz Python-2.7.5.tgz && \
+    cd Python-2.7.5 && \
     ./configure --prefix=/usr/local && \
     make && \
     make altinstall
